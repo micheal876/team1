@@ -1,5 +1,5 @@
-import { setLocalStorage } from './utils.mjs';
-import { findProductById } from './productData.mjs';
+import { setLocalStorage } from '../js/utils.mjs';
+import { findProductById } from '../js/productData.mjs';
 
 function addProductToCart(product) {
   setLocalStorage('so-cart', product);
