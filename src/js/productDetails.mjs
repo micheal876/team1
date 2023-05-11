@@ -1,8 +1,5 @@
-import { getParam, setLocalStorage } from '../js/utils.mjs';
-import { findProductById } from '../js/productData.mjs';
-
-const productId = getParam('product');
-productDetails(productId);
+import { findProductById } from './productData.mjs';
+import { setLocalStorage } from './utils.mjs';
 
 let product = {};
 
