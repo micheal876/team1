@@ -6,7 +6,7 @@ function convertToJson(res) {
   }
 }
 
-export async function getData(category = 'tents') {
+export async function getData(category) {
   const res = await fetch(`../json/${category}.json`);
   const data = await convertToJson(res);
   return data;
