@@ -1,8 +1,5 @@
-import { getParam } from "../js/utils.mjs";
-import { findProductById } from '../js/productData.mjs';
-
-const productId = getParam("product");
-productDetails(productId);
+import { findProductById } from './productData.mjs';
+import { setLocalStorage } from './utils.mjs';
 
 let product = {};
 
@@ -12,21 +9,21 @@ export default async function productDetails(productId) {
   // once we have the product details we can render out the HTML
   renderProductDetails();
   // once the HTML is rendered we can add a listener to Add to Cart button
-  document.getElementById("addToCart").addEventListener("click", addToCart);
+  document.getElementById('addToCart').addEventListener('click', addToCart);
 }
 function addToCart() {
-  setLocalStorage("so-cart", product);
+  setLocalStorage('so-cart', product);
 }
 function renderProductDetails() {
-  document.querySelector("#productName").innerText = product.Brand.Name;
-  document.querySelector("#productNameWithoutBrand").innerText =
+  document.querySelector('#productName').innerText = product.Brand.Name;
+  document.querySelector('#productNameWithoutBrand').innerText =
     product.NameWithoutBrand;
-  document.querySelector("#productImage").src = product.Image;
-  document.querySelector("#productImage").alt = product.Name;
-  document.querySelector("#productFinalPrice").innerText = product.FinalPrice;
-  document.querySelector("#productColorName").innerText =
+  document.querySelector('#productImage').src = product.Image;
+  document.querySelector('#productImage').alt = product.Name;
+  document.querySelector('#productFinalPrice').innerText = product.FinalPrice;
+  document.querySelector('#productColorName').innerText =
     product.Colors[0].ColorName;
-  document.querySelector("#productDescriptionHtmlSimple").innerHTML =
+  document.querySelector('#productDescriptionHtmlSimple').innerHTML =
     product.DescriptionHtmlSimple;
-  document.querySelector("#addToCart").dataset.id = product.Id;
+  document.querySelector('#addToCart').dataset.id = product.Id;
 }
