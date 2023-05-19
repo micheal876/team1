@@ -9,7 +9,7 @@ export default async function productDetails(productId) {
   // once we have the product details we can render out the HTML
   renderProductDetails();
   // once the HTML is rendered we can add a listener to Add to Cart button
-  document.getElementById('addToCart').addEventListener('click', addToCart);
+  // document.getElementById('addToCart').addEventListener('click', addToCart);
 }
 function addToCart() {
   setLocalStorage('so-cart', product);

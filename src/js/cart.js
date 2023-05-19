@@ -2,8 +2,9 @@ import { getLocalStorage } from '../js/utils.mjs';
 
 function renderCartContents() {
   const cartItems = getLocalStorage('so-cart');
- // const htmlItems = cartItems.map((item) => cartItemTemplate(item));
- const htmlItems = cartItemTemplate(cartItems);
+  
+  const htmlItems = cartItems.map((item) => cartItemTemplate(item));
+//  const htmlItems = cartItemTemplate(cartItems);
  
   document.querySelector('.product-list').innerHTML += htmlItems;
 }
