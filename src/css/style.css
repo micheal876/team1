@@ -201,7 +201,10 @@ button {
   grid-row: 2;
   grid-column: 3;
 }
-
+.retail-price {
+  text-decoration: line-through;
+  color: red;
+}
 @media screen and (min-width: 500px) {
   body {
     max-width: 1080px;
